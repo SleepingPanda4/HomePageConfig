@@ -9,6 +9,8 @@ Download this repository to where you will be hosting your docker config files. 
 RUN:
 ```
 cd /your/path/to/docker/configs/ | EXAMPLE: /srv/dockerdata/homepage/config | This will be the same as your volume
+```
+```
 git clone https://github.com/SleepingPanda4/HomePageConfig.git
 mv HomePageConfig/* ./
 rm -r HomePageConfig
