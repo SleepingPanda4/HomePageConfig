@@ -8,7 +8,7 @@
 Download this repository to where you will be hosting your docker config files. Example: /srv/dockerdata/homepage/config
 RUN:
 ```
-cd /your/path/to/docker/configs/
+cd /your/path/to/docker/configs/ | EXAMPLE: /srv/dockerdata/homepage/config | This will be the same as your volume
 git clone https://github.com/SleepingPanda4/HomePageConfig.git
 mv HomePageConfig/* ./
 rm -r HomePageConfig
@@ -22,7 +22,7 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - /srv/dockerdata/homepage/config:/app/config # Make sure your local config directory exists | CHANGE THIS IF DIRECTORY IS DIFFERENT
+      - /srv/dockerdata/homepage/config:/app/config # Make sure your local config directory exists | CHANGE THIS IF DIRECTORY IS DIFFERENT | MUST BE THE SAME DIRECTORY YOU DOWNLOADED REPOSITORY TO
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
     environment:
       #NOT NEEDED IF USING .env FILE!
