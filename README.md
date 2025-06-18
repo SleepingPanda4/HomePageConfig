@@ -27,6 +27,7 @@ services:
 **Please go through and make sure all commented variables in "services.yaml" and "docker.yaml" match your variables**
 
 
+
 Change docker.yaml to fit your IP addresses for your docker instance. If running homepage on seperate docker instance you have to run: 
 
 ```
