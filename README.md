@@ -40,8 +40,16 @@ services:
 **Please go through and make sure all commented variables in "services.yaml" and "docker.yaml" match your variables**
 
 
+### Remote Docker Sock | docker.yaml config
+Change docker.yaml to fit your IP addresses for your docker instance.
+```
+# FORMAT:
+variable-instance-name:
+  host: # docker-ip | EXAMPLE 127.0.0.1
+  port: 2375 #This will always be the same
+```
 
-Change docker.yaml to fit your IP addresses for your docker instance. If running homepage on seperate docker instance you have to run: 
+If running homepage on seperate machine from your dockers you have to run: 
 
 ```
 sudo systemctl edit docker.service
