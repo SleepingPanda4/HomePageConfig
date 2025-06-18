@@ -3,6 +3,8 @@
 
 # Installation
 
+**Please read full document before continuing!!**
+
 ## Docker
 
 Download this repository to where you will be hosting your docker config files. Example: /srv/dockerdata/homepage/config
