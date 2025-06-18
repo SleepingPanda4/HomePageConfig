@@ -31,7 +31,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
     environment:
       #NOT NEEDED IF USING .env FILE!
-      HOMEPAGE_ALLOWED_HOSTS: 192.168.1.1:3000 # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
+      HOMEPAGE_ALLOWED_HOSTS: 192.168.1.XXX:3000 # required if not using .env file. See gethomepage.dev/installation/#homepage_allowed_hosts
 
     restart: unless-stopped
 ```
