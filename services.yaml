@@ -194,15 +194,15 @@
               key: {{HOMEPAGE_VAR_PORTAINERARR_API_KEY}}
 
     # PORTAINER TEMPLATE | TO EDIT: HIGHLIGHT AND PRESS CTRL+/
-        - Portainer Media Server:
-            icon: si-portainer-#13BEF9
-            href: https://{{HOMEPAGE_VAR_PORTAINER_IP}}:9443/ # CHANGE VARIABLE TO YOUR .env PORTAINER VARIABLE, or REPLACE WITH YOUR IP FOR PORTAINER
-            description: Portainer
-            server: my-docker # Change to your docker.yaml variable-instance-name
-            container: portainer # Change to your container name in docker | DEFAULT WILL BE "portainer"
-            statusStyle: dot # Will show Green/Orange/Red status dot
-            widget:
-              type: portainer
-              url: https://{{HOMEPAGE_VAR_PORTAINER_IP}}:9443
-              env: 3
-              key: {{HOMEPAGE_VAR_PORTAINER_API_KEY}} # CHANGE TO API VARIABLE OR ADD API KEY INSTEAD
+        # - Portainer Media Server:
+        #     icon: si-portainer-#13BEF9
+        #     href: https://{{HOMEPAGE_VAR_PORTAINER_IP}}:9443/ # CHANGE VARIABLE TO YOUR .env PORTAINER VARIABLE, or REPLACE WITH YOUR IP FOR PORTAINER
+        #     description: Portainer
+        #     server: my-docker # Change to your docker.yaml variable-instance-name
+        #     container: portainer # Change to your container name in docker | DEFAULT WILL BE "portainer"
+        #     statusStyle: dot # Will show Green/Orange/Red status dot
+        #     widget:
+        #       type: portainer
+        #       url: https://{{HOMEPAGE_VAR_PORTAINER_IP}}:9443
+        #       env: 3
+        #       key: {{HOMEPAGE_VAR_PORTAINER_API_KEY}} # CHANGE TO API VARIABLE OR ADD API KEY INSTEAD
