@@ -15,6 +15,7 @@ git clone https://github.com/SleepingPanda4/HomePageConfig.git
 mv HomePageConfig/* ./
 rm -r HomePageConfig
 ```
+#### docker-compose.yaml/portainer stack compose
 ```
 services:
   homepage:
