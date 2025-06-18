@@ -1,0 +1,208 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+# ADD AS MANY LINKS AS YOU WISH HERE
+- Links:
+    - YouTube:
+        icon: youtube.png
+        href: youtube.com
+    - Google Sheets:
+        icon: https://images.icon-icons.com/3053/PNG/512/google_sheets_macos_bigsur_icon_190111.png
+        href: 
+    - Finances:
+        icon: https://images.icon-icons.com/3053/PNG/512/google_sheets_macos_bigsur_icon_190111.png
+        href: 
+
+
+# NOTES:
+# FOR ALL "{{HOMEPAGE_VAR_XXX}}" YOU CAN REPLACE WITH IP/API KEY IF NOT USING .env or environment variables. 
+# Please read all comments as they might be the thing that breaks or fixes the config
+- Plex Server:
+    - Plex:
+        icon: plex.png
+        href: https://app.plex.tv/desktop/
+        description: Media Server
+        server: unraid-server # Change to your docker.yaml variable-instance-name
+        container: Plex-Media-Server # Change to your container name in docker
+        statusStyle: dot # Will show Green/Orange/Red status dot
+        widget:
+          type: plex
+          url: http://{{HOMEPAGE_VAR_PLEX_IP_ADDR}}:32400
+          key: "{{HOMEPAGE_VAR_PLEX_API_KEY}}"  
+    - Tautulli:
+        icon: https://avatars.githubusercontent.com/u/34385001?v=4
+        href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8181/
+        description: Tautulli Server
+        server: arr-docker # Change to your docker.yaml variable-instance-name
+        container: tautulli # Change to your container name in docker
+        statusStyle: dot # Will show Green/Orange/Red status dot
+        widget:
+          type: tautulli
+          url: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8181
+          key: "{{HOMEPAGE_VAR_TAUTULLI_API_KEY}}"
+          enableUser: true # optional, defaults to false
+          showEpisodeNumber: true # optional, defaults to false
+          expandOneStreamToTwoRows: false # optional, defaults to true
+
+- Dahl Home ARR:
+    - Sonarr:
+        icon: sonarr.png
+        href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8990/
+        description: Sonarr Server 
+        server: arr-docker # Change to your docker.yaml variable-instance-name
+        container: sonarr2 # Change to your container name in docker
+        statusStyle: "dot" # Will show Green/Orange/Red status dot
+        widget:
+          type: sonarr
+          url: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8990/
+          key: "{{HOMEPAGE_VAR_SONARR_API_KEY}}"
+          enableQueue: false # optional, defaults to false
+    - Radarr:
+        icon: radarr.png
+        href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:7878/
+        description: Radarr Server
+        server: arr-docker # Change to your docker.yaml variable-instance-name
+        container: radarr # Change to your container name in docker
+        statusStyle: dot # Will show Green/Orange/Red status dot
+        widget:
+          type: radarr
+          url: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:7878/
+          key: "{{HOMEPAGE_VAR_RADARR_API_KEY}}"
+          enableQueue: false # optional, defaults to false
+    - Overseerr:
+        icon: overseerr.png
+        href: https://overseerr.sleepingpandaind.com/
+        description: Overseerr Server
+        server: arr-docker # Change to your docker.yaml variable-instance-name
+        container: overseerr # Change to your container name in docker
+        statusStyle: dot # Will show Green/Orange/Red status dot
+        widget:
+          type: overseerr
+          url: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:5055
+          key: "{{HOMEPAGE_VAR_OVERSEERR_API_KEY}}"
+          enableLeechProgress: false # optional, defaults to false  	
+    - Prowlarr:
+        icon: prowlarr.png
+        href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:9696/
+        description: Prowlarr Server
+        server: arr-docker # Change to your docker.yaml variable-instance-name
+        container: prowlarr # Change to your container name in docker
+        statusStyle: dot # Will show Green/Orange/Red status dot
+        widget:
+          type: prowlarr
+          url: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:9696/
+          key: "{{HOMEPAGE_VAR_PROWLARR_API_KEY}}"
+    - bazarr:
+        icon: bazarr.png
+        href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:6767/
+        description: Bazarr Server
+        server: arr-docker # Change to your docker.yaml variable-instance-name
+        container: bazarr # Change to your container name in docker
+        statusStyle: dot # Will show Green/Orange/Red status dot
+        widget:
+          type: bazarr
+          url: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:6767
+          key: "{{HOMEPAGE_VAR_BAZARR_API_KEY}}"
+
+- Dahl Home Download:
+    - qBittorrent:
+        icon: qbittorrent.png
+        href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8080/
+        description: qBittorrent Server
+        server: arr-docker # Change to your docker.yaml variable-instance-name
+        container: qbittorrent # Change to your container name in docker
+        statusStyle: dot # Will show Green/Orange/Red status dot
+        widget:
+          type: qbittorrent
+          url: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8080
+          username: "{{HOMEPAGE_VAR_qbittorrent_USERNAME}}"
+          password: "{{HOMEPAGE_VAR_qbittorrent_PASSWORD}}"
+          enableLeechProgress: false # optional, defaults to false  	
+    - NZBget:
+        icon: nzbget.png
+        href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:6789/
+        description: Bazarr Server
+        server: arr-docker # Change to your docker.yaml variable-instance-name
+        container: nzbget2 # Change to your container name in docker
+        statusStyle: dot # Will show Green/Orange/Red status dot
+        widget:
+          type: nzbget
+          url: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:6789/
+          username: {{HOMEPAGE_VAR_NZBGET_USERNAME}}
+          password: {{HOMEPAGE_VAR_NZBGET_PASSWORD}}
+
+- Proxmox:
+    - r630:
+        icon: proxmox.png
+        href: https://{{HOMEPAGE_VAR_r630_URL_IP}}:8006/
+        widget:
+          type: proxmox
+          url: https://{{HOMEPAGE_VAR_r630_URL_IP}}:8006
+          username: {{HOMEPAGE_VAR_r630_API_KEY_TOKEN_ID}}
+          password: {{HOMEPAGE_VAR_r630_API_KEY_TOKEN_SECRET}}
+          # node: prox1 # optional
+    - r730xd:
+        icon: proxmox.png
+        href: https://{{HOMEPAGE_VAR_r730xd_UNRAID_URL_IP}}:8006/
+        widget:
+          type: proxmox
+          url: https://{{HOMEPAGE_VAR_r730xd_UNRAID_URL_IP}}:8006/
+          username: {{HOMEPAGE_VAR_r730xd_UNRAID_API_KEY_TOKEN_ID}}
+          password: {{HOMEPAGE_VAR_r730xd_UNRAID_API_KEY_TOKEN_SECRET}}
+          node: prox # optional
+    - Gaming Rig:
+        icon: proxmox.png
+        href: https://{{HOMEPAGE_VAR_GAMING_RIG_URL_IP}}:8006/
+        widget:
+          type: proxmox
+          url: https://{{HOMEPAGE_VAR_GAMING_RIG_URL_IP}}:8006/
+          username: {{HOMEPAGE_VAR_GAMING_RIG_API_KEY_TOKEN_ID}}
+          password: {{HOMEPAGE_VAR_GAMING_RIG_API_KEY_TOKEN_SECRET}}
+          node: prox # optional
+
+- Server:
+    - Unraid:
+        icon: unraid.png
+        href: http://{{HOMEPAGE_VAR_UNRAID_IP_ADDR}}
+        # TO ADD MONITORING TO UNRAID GO TO | https://github.com/NebN/unraid-simple-monitoring-api
+    - Portainer VaultWarden:
+            icon: si-portainer-#13BEF9
+            href: # ADD 
+            description: Portainer
+    - SpeedTest:
+        icon: si-speedtest-#141526
+        href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8765
+        description: What's your speed today?
+        widget:
+          type: speedtest
+          url: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8765
+          version: 1 # optional, default is 1
+          # key: "{{HOMEPAGE_VAR_SPEEDTEST_API_KEY}}" # required for version 2
+          bitratePrecision: 3 # optional, default is 0
+    - Portainer Media Server:
+            icon: si-portainer-#13BEF9
+            href: https://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:9443/
+            description: Portainer
+            server: arr-docker # Change to your docker.yaml variable-instance-name
+            container: portainer # Change to your container name in docker | DEFAULT WILL BE "portainer"
+            statusStyle: dot # Will show Green/Orange/Red status dot
+            widget:
+              type: portainer
+              url: https://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:9443
+              env: 3
+              key: {{HOMEPAGE_VAR_PORTAINERARR_API_KEY}}
+
+    # PORTAINER TEMPLATE | TO EDIT: HIGHLIGHT AND PRESS CTRL+/
+        # - Portainer Media Server:
+        #     icon: si-portainer-#13BEF9
+        #     href: https://{{HOMEPAGE_VAR_PORTAINER_IP}}:9443/ # CHANGE VARIABLE TO YOUR .env PORTAINER VARIABLE, or REPLACE WITH YOUR IP FOR PORTAINER
+        #     description: Portainer
+        #     server: my-docker # Change to your docker.yaml variable-instance-name
+        #     container: portainer # Change to your container name in docker | DEFAULT WILL BE "portainer"
+        #     statusStyle: dot # Will show Green/Orange/Red status dot
+        #     widget:
+        #       type: portainer
+        #       url: https://{{HOMEPAGE_VAR_PORTAINER_IP}}:9443
+        #       env: 3
+        #       key: {{HOMEPAGE_VAR_PORTAINER_API_KEY}} # CHANGE TO API VARIABLE OR ADD API KEY INSTEAD

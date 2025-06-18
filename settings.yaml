@@ -1,0 +1,52 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/settings/
+
+title: Home
+
+description: Homepage
+
+background: 
+  image: https://wallpapercat.com/w/full/8/7/7/194290-3840x2160-desktop-4k-outer-space-wallpaper-photo.jpg
+  blur: md
+  saturate: 50
+  brightness: 10
+  opacity: 40
+
+layout:
+  Links:
+    style: row
+    columns: 3
+  Plex Server:
+    style: row
+    columns: 2
+  ARR:
+    style: row
+    columns: 5
+  Download:
+    style: row
+    columns: 2
+  Home:
+    style: row
+    columns: 2
+  Proxmox:
+    style: row
+    columns: 3
+  Server:
+    style: row
+    columns: 2
+    
+disableCollapse: true
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: "{{HOMEPAGE_VAR_WEATHERAPI_API_KEY}}"
+  finnhub: "{{HOMEPAGE_VAR_FINNHUB_API_KEY}}"
+
+headerStyle: boxed
+
+
+hideErrors: true
+
+hideVersion: true
+
+useEqualHeights: true

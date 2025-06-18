@@ -1,0 +1,25 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/docker/
+
+# TO USE REMOTE DOCKER SOCKET YOU MUST:
+# sudo systemctl edit docker.service
+# [Service]
+# ExecStart=
+# ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H tcp://0.0.0.0:2375
+
+# FORMAT:
+# variable-instance-name:
+#   host: # docker-ip | EXAMPLE 127.0.0.1
+#   port: 2375 #This will always be the same
+
+# For local docker socket use:
+# my-docker: 
+#   socket: /var/run/docker.sock
+
+arr-docker:
+  host: #YOUR ARR DOCKER IP ADDRESS | EXAMPLE 192.168.1.XXX
+  port: 2375
+
+unraid-server: 
+  socket: /var/run/docker.sock
