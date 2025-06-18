@@ -23,8 +23,8 @@ services:
     restart: unless-stopped
 ```
 
-### You must edit the .env file before you launch the docker. Anytime you change the .env file you must redeploy your docker compose stack.
-### Please go through and make sure all commented variables in "services.yaml" and "docker.yaml" match your variables
+#### You must edit the .env file before you launch the docker. Anytime you change the .env file you must redeploy your docker compose stack.
+#### Please go through and make sure all commented variables in "services.yaml" and "docker.yaml" match your variables
 Change docker.yaml to fit your IP addresses for your docker instance. If running homepage on seperate docker instance you have to run: 
 
 ```
