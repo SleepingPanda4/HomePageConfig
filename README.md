@@ -5,6 +5,14 @@
 
 ## Docker
 
+Download this repository to where you will be hosting your docker config files. Example: /srv/dockerdata/homepage/config
+RUN:
+```
+cd /your/path/to/docker/configs/
+git clone https://github.com/SleepingPanda4/HomePageConfig.git
+mv HomePageConfig/* ./
+rm -r HomePageConfig
+```
 ```
 services:
   homepage:
