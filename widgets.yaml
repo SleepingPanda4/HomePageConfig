@@ -8,5 +8,26 @@
     disk: /
 
 - search:
-    provider: duckduckgo
+    provider: google
     target: _blank
+    
+- openmeteo:
+    label:  # optional
+    latitude: # Add Lat
+    longitude: # Add Long
+    #timezone:  # optional
+    units: imperial # or metric
+    cache: 5 # Time in minutes to cache API responses, to stay within limits
+    format: # optional, Intl.NumberFormat options
+      maximumFractionDigits: 1
+
+- stocks:
+    provider: finnhub
+    color: true # optional, defaults to true
+    cache: 1 # optional, default caches results for 1 minute
+    watchlist:
+    - DJIA
+    - TSLA
+    - AAPL
+    - META
+    - NVDA
