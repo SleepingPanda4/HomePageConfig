@@ -45,7 +45,7 @@
           showEpisodeNumber: true # optional, defaults to false
           expandOneStreamToTwoRows: false # optional, defaults to true
 
-- Home ARR:
+- ARR:
     - Sonarr:
         icon: sonarr.png
         href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8990/
