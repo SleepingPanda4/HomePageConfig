@@ -19,7 +19,7 @@ cd /your/path/to/docker/configs/ | EXAMPLE: /srv/dockerdata/homepage/config | Th
 ```
 ```
 git clone https://github.com/SleepingPanda4/HomePageConfig.git
-mv HomePageConfig/* ./
+mv HomePageConfig/* ./ && mv HomePageConfig/.env ./
 rm -r HomePageConfig
 ```
 #### docker-compose.yaml/portainer stack compose
