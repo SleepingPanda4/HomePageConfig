@@ -166,10 +166,18 @@
         icon: unraid.png
         href: http://{{HOMEPAGE_VAR_UNRAID_IP_ADDR}}
         # TO ADD MONITORING TO UNRAID GO TO | https://github.com/NebN/unraid-simple-monitoring-api
-    - Portainer VaultWarden:
+    - Portainer ARR Server:
             icon: si-portainer-#13BEF9
-            href: # ADD 
+            href: https://{{HOMEPAGE_VAR_PLEX_IP_ADDR}}:9443/
             description: Portainer
+            server: arr-docker # Change to your docker.yaml variable-instance-name
+            container: portainer # Change to your container name in docker | DEFAULT WILL BE "portainer"
+            statusStyle: dot # Will show Green/Orange/Red status dot
+            widget:
+              type: portainer
+              url: https://{{HOMEPAGE_VAR_PLEX_IP_ADDR}}:9443
+              env: 3
+              key: {{HOMEPAGE_VAR_PORTAINERARR_API_KEY}}
     - SpeedTest:
         icon: si-speedtest-#141526
         href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8765
@@ -191,7 +199,7 @@
               type: portainer
               url: https://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:9443
               env: 3
-              key: {{HOMEPAGE_VAR_PORTAINERARR_API_KEY}}
+              key: {{HOMEPAGE_VAR_PORTAINERPLEX_API_KEY}}
 
     # PORTAINER TEMPLATE | TO EDIT: HIGHLIGHT AND PRESS CTRL+/
         # - Portainer Media Server:
