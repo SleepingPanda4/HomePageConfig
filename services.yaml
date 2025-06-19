@@ -45,7 +45,7 @@
           showEpisodeNumber: true # optional, defaults to false
           expandOneStreamToTwoRows: false # optional, defaults to true
 
-- Dahl Home ARR:
+- Home ARR:
     - Sonarr:
         icon: sonarr.png
         href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8990/
@@ -105,7 +105,7 @@
           url: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:6767
           key: "{{HOMEPAGE_VAR_BAZARR_API_KEY}}"
 
-- Dahl Home Download:
+- Download:
     - qBittorrent:
         icon: qbittorrent.png
         href: http://{{HOMEPAGE_VAR_ARR_IP_ADDR}}:8080/
