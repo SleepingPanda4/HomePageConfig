@@ -35,8 +35,7 @@ services:
       - /srv/dockerdata/homepage/config:/app/config # Make sure your local config directory exists | CHANGE THIS IF DIRECTORY IS DIFFERENT | MUST BE THE SAME DIRECTORY YOU DOWNLOADED REPOSITORY TO
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
     environment:
-      #NOT NEEDED IF USING .env FILE!
-      HOMEPAGE_ALLOWED_HOSTS: 192.168.1.XXX:3000 # required if not using .env file. See gethomepage.dev/installation/#homepage_allowed_hosts
+      HOMEPAGE_ALLOWED_HOSTS: 192.168.1.XXX:3000 # ADDRESS FOR HOMEPAGE | EXAMPLE: 192.168.1.XXX:3000 or homepage.myhomedomain.com See gethomepage.dev/installation/#homepage_allowed_hosts
 
     restart: unless-stopped
 ```
